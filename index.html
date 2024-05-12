@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .card-container{
+            
+            border: 2px solid greenyellow;
+            width: 350px;
+            position: relative;
+        }
+
+        .card-container img{
+            width: 100%;
+        }
+
+        .card-container .animated-shadow{
+            width: 100%;
+            height: 0%;
+            background: rgba(0, 255, 255,.7);
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn{
+            z-index: -1;
+        }
+        
+        .card-container:hover .animated-shadow{
+            height: 100%;
+            transition: all 0.9s;
+        }
+        .card-container:hover button{
+            display: inline-block;
+            transition: all 0.9s;
+        }
+
+        .card-container:hover .btn{
+            z-index: 2;
+            transition: all 1s;
+        }
+        .card-container:hover button{
+            display: inline-block;
+            transition: all 0.9s;
+        }
+
+        
+        
+        button{
+            padding: 12px 16px;
+            background-color: gold;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <img src="https://dummyimage.com/250/000000/ffffff" alt="">
+        <div class="card-text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, modi aliquam delectus maiores sed quas, consequuntur repudiandae qui repellendus unde molestiae, ducimus quos eligendi autem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sapiente, sint rerum similique, dignissimos aperiam, vel eaque deserunt quia a commodi delectus minima ut voluptas tempora culpa obcaecati nulla excepturi.</p>
+        </div>
+        <div class="animated-shadow">
+            <div class="btn">
+                <button>BTN-1</button>
+                <button>BTN-2</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
